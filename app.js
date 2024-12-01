@@ -45,6 +45,7 @@ function setPlayerIcon(cell, player) {
 	}
 }
 
+// Chosing plater buttons
 grinchBtn.addEventListener("click", (event) => {
 	player = "Mr Grinchy";
 	computer = "Santa Claus";
@@ -141,6 +142,7 @@ function checkWinner() {
 	});
 }
 
+// Gaming logic
 cells.forEach((cell) => {
 	cell.addEventListener("click", (event) => {
 		if (cell.innerHTML == "") {
@@ -172,6 +174,8 @@ cells.forEach((cell) => {
 	});
 });
 
+
+// Restart game function
 function restartGame() {
 	cells.forEach((cell) => {
 		cell.innerHTML = "";
@@ -185,7 +189,10 @@ function restartGame() {
 	modal.style.display = "flex";
 }
 
+
+// Restart button listener
 restart.addEventListener("click", restartGame);
+
 
 // Playing sounds
 function playSound(audioFilePath) {
@@ -195,6 +202,8 @@ function playSound(audioFilePath) {
 	});
 }
 
+
+//Ending winner modal function
 function endModal(winner) {
 	const grinchy = document.getElementsByClassName("monster")[0];
 	const santaClaus = document.getElementsByClassName("santa")[0];
@@ -223,10 +232,13 @@ function endModal(winner) {
 	}
 }
 
+// Closing end modal
 function closeEndModal() {
 	endModalContainer.style.display = "none";
 }
 
+
+// Restart button on end-modal
 restartEnd.addEventListener("click", () => {
 	closeEndModal();
 	restartGame();
