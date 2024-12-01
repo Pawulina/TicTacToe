@@ -174,7 +174,6 @@ cells.forEach((cell) => {
 	});
 });
 
-
 // Restart game function
 function restartGame() {
 	cells.forEach((cell) => {
@@ -189,10 +188,8 @@ function restartGame() {
 	modal.style.display = "flex";
 }
 
-
 // Restart button listener
 restart.addEventListener("click", restartGame);
-
 
 // Playing sounds
 function playSound(audioFilePath) {
@@ -201,7 +198,6 @@ function playSound(audioFilePath) {
 		console.error(`Error during audio display`, error);
 	});
 }
-
 
 //Ending winner modal function
 function endModal(winner) {
@@ -236,7 +232,6 @@ function endModal(winner) {
 function closeEndModal() {
 	endModalContainer.style.display = "none";
 }
-
 
 // Restart button on end-modal
 restartEnd.addEventListener("click", () => {
